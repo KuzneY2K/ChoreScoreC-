@@ -40,7 +40,6 @@ public class ChoresController : ControllerBase
         {
             Chore chore = _choresService.CreateChore(choreData);
             return Ok(chore);
-
         }
         catch (Exception e)
         {
