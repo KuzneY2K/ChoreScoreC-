@@ -22,4 +22,9 @@ public class ChoresService
         Chore chore = _choresRepo.CreateChore(choreData);
         return chore;
     }
+
+    internal void RemoveChore(Guid choreId)
+    {
+
+    }
 }
