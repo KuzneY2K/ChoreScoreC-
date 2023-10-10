@@ -37,6 +37,9 @@ public class Startup
 
     services.AddSingleton<ChoresRepository>();
     services.AddScoped<ChoresService>();
+
+    services.AddSingleton<PetsRepository>();
+    services.AddScoped<PetsService>();
   }
 
   private void ConfigureCors(IServiceCollection services)
