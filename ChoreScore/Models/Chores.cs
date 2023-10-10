@@ -7,6 +7,11 @@ public class Chore
     public bool Completed { get; set; }
     public string Tasker { get; set; }
 
+    public Chore()
+    {
+
+    }
+
     public Chore(Guid id, string choreName, bool complete, string tasker)
     {
         Id = id;
