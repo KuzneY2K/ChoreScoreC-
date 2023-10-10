@@ -20,12 +20,18 @@ public class ChoresRepository
         return _FakeDb;
     }
 
+    internal Chore GetChore(Guid choreId)
+    {
+
+    }
+
     internal Chore CreateChore(Chore choreData)
     {
         choreData.Id = id;
         _FakeDb.Add(choreData);
         return choreData;
     }
+
 
     internal void RemoveChore(Guid choreId)
     {
