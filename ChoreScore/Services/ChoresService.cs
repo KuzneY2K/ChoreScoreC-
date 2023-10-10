@@ -33,8 +33,10 @@ public class ChoresService
         return chore;
     }
 
-    internal void RemoveChore(Guid choreId)
+    internal string RemoveChore(Guid choreId)
     {
-
+        Chore chore = this.GetChore(choreId);
+        _choresRepo.RemoveChore(choreId);
+        return $"{choreId} was removed!";
     }
 }
