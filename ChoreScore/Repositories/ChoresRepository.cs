@@ -6,13 +6,11 @@ public class ChoresRepository
 {
     private List<Chore> _FakeDb;
 
-    Guid id = Guid.NewGuid();
-
     public ChoresRepository()
     {
         _FakeDb = new List<Chore>();
-        _FakeDb.Add(new Chore(id, "Clean", false, "Mark"));
-        _FakeDb.Add(new Chore(id, "Do Dishes", false, "Mark"));
+        // _FakeDb.Add(new Chore(id, "Clean", false, "Mark"));
+        // _FakeDb.Add(new Chore(id, "Do Dishes", false, "Mark"));
     }
 
     internal List<Chore> GetAllChores()
@@ -28,6 +26,7 @@ public class ChoresRepository
 
     internal Chore CreateChore(Chore choreData)
     {
+        Guid id = Guid.NewGuid();
         choreData.Id = id;
         _FakeDb.Add(choreData);
         return choreData;
