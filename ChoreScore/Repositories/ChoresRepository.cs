@@ -26,4 +26,10 @@ public class ChoresRepository
         _FakeDb.Add(choreData);
         return choreData;
     }
+
+    internal void RemoveChore(Guid choreId)
+    {
+        Chore chore = _FakeDb.Find(c => c.Id == choreId);
+        _FakeDb.Remove(chore);
+    }
 }
