@@ -33,6 +33,20 @@ public class ChoresController : ControllerBase
         }
     }
 
+    [HttpGet]
+    public ActionResult<Chore> GetChore(Guid choreId)
+    {
+        try
+        {
+            Chore chore = _choresService.GetChore(choreId);
+            return chore;
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
     [HttpPost]
     public ActionResult<Chore> CreateChore([FromBody] Chore choreData)
     {

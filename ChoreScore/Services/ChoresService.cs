@@ -17,6 +17,16 @@ public class ChoresService
         return chores;
     }
 
+    internal Chore GetChore(Guid choreId)
+    {
+        Chore chore = _choresRepo.GetChore(choreId);
+        if (chore == null)
+        {
+            throw new Exception($"No {choreId} found!");
+        }
+        return chore;
+    }
+
     internal Chore CreateChore(Chore choreData)
     {
         Chore chore = _choresRepo.CreateChore(choreData);

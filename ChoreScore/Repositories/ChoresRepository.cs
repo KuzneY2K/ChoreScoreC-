@@ -22,7 +22,8 @@ public class ChoresRepository
 
     internal Chore GetChore(Guid choreId)
     {
-
+        Chore chore = _FakeDb.Find(c => c.Id == choreId);
+        return chore;
     }
 
     internal Chore CreateChore(Chore choreData)
