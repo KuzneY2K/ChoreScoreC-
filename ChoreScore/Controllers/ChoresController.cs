@@ -33,7 +33,7 @@ public class ChoresController : ControllerBase
         }
     }
 
-    [HttpGet]
+    [HttpGet("{choreId}")]
     public ActionResult<Chore> GetChore(Guid choreId)
     {
         try
