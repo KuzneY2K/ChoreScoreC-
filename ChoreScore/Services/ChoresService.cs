@@ -17,5 +17,9 @@ public class ChoresService
         return chores;
     }
 
-    internal Chore
+    internal Chore CreateChore(Chore choreData)
+    {
+        Chore chore = _choresRepo.CreateChore(choreData);
+        return chore;
+    }
 }
